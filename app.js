@@ -51,10 +51,11 @@ function checkWinner(){
            
                 button.disabled = true; // Enable button
             });
-            
+        winnerFound = true;
+            break;
         }
     }
-    if (board.every(cell => cell)) {
+    if (!winnerFound && board.every(cell => cell)) {
         result.innerText="It's a draw!"
     }
 }
